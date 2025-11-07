@@ -5,7 +5,11 @@
    | Tablet        | `16px`        | `32px`        |
    | Desktop       | `16px`        | `48px`        | */
 
-.mobile-nav-bar {
+body {
+  padding: 0;
+  margin: 0;
+}
+.nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,45 +18,80 @@
     border: 1px solid black;
 }
 
-.nav-header h1 {
+.nav-header h1, button {
   font-size: 2em;
 }
 
 button {
-  font-size: 2em;
   border-radius: 10px;
   padding: 16px;
 }
 
+.nav-links {
+  display: none;
+}
+
+/* fixed */
 .main-content {
   display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
-  grid-gap: 16px;
+  gap: 16px;
+  margin: 16px;
 }
 
 .movie-container {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   border: 1px solid black;
-  /* margin: 16px; */
 }
 
-.movie-desc, .watch-btn {
-  padding: 16px;
+.movie-desc {
+  margin: 12px;
+}
+
+.watch-btn {
+  margin: auto 12px 12px;
+  /* margin-top: auto; */
 }
 
 .movie-container p {
-  font-size: 1.5em
+  font-size: 1.5em;
+  margin: 0; 
 }
 
 .poster {
-  margin: 0 auto;
   border: 1px solid black;
+  object-fit: cover; 
 }
 
 .poster img {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  justify-self: start;
+}
+
+@media screen and (min-width: 720px) {
+  .nav-bar {
+    padding: 16px;
+    margin-bottom: 32px;
+  }
+
+  .nav-header h1 {
+    font-size: 3em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    margin: 0 32px;
+  }
+
+  .main-content {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 32px;
+    gap: 32px;
+  }
 }
