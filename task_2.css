@@ -195,6 +195,7 @@ p {
       "item5 item5"
       "item6 item6";
     padding: 0 48px;
+    margin-bottom: 48px;
     gap: 48px;
   }
 }
