@@ -67,11 +67,9 @@ p {
 
 .movie-container {
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
   border: 1px solid #070410;
   background-color: #231651;
-  /* box-shadow: 10px 10px #4dccbd; */
 }
 
 .movie-desc {
